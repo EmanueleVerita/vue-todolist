@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    
+
+
+<div id="app">
+
+    <input type="text" v-model="newToDo.text">
+    <button @click="addToDo()">
+        Aggiugngi
+    </button>
+
+
+</div>
+
+<ul>
+    <li class="toDo" v-for="(singleToDO, i) in toDos":class="{'toDo-done': singleToDo.done}">
+
+
+        {{ singleToDo.text }}
+
+        <span @click="removeToDo(i)">
+            X
+        </span>
+    </li>
+</ul>
+
+
+
+
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
